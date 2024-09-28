@@ -37,7 +37,7 @@
         <div class="w-[80%] mx-auto flex pb-36">
             <div>
                 <h1 class="text-xl font-bold">Kitchenware</h1>
-                <div class="mt-4 grid grid-cols-3 gap-5">
+                <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-5">
                     <div id="product-1" class="rounded-lg p-3 space-y-3 flex flex-col items-center bg-white">
                         <img src="images/prod1.png" alt="" class="bg-[#1111110D] p-5 
                         w-[200px] h-[200px]">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <h1 class="mt-10 text-xl font-bold">Sportswear</h1>
-                <div class="mt-4 grid grid-cols-3 gap-5">
+                <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-5">
                     <div id="product-4" class="rounded-lg p-3 space-y-3 flex flex-col items-center bg-white">
                         <img src="images/prod4.png" alt="" class="bg-[#1111110D] p-5 w-[200px] h-[200px]">
                         <div>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <h1 class=" mt-10 text-xl font-bold">Furniture</h1>
-                <div class="mt-4 grid grid-cols-3 gap-5">
+                <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-5">
                     <div id="product-7" class="rounded-lg p-3 space-y-3 flex flex-col items-center bg-white">
                         <img src="images/prod7.png" alt="" class="bg-[#1111110D] p-5 w-[200px] h-[200px]">
                         <div>
@@ -158,9 +158,9 @@
             <div>
                 <div class="bg-white w-[350px] rounded-lg p-5 py-6 mt-11 ml-6 h-max"> 
                     <h3 class="font-semibold text-lg mb-3">Have coupon?</h3>
-                    <input class="border border-[#11111126] rounded-lg p-2 h-12 -mr-3" type="text" name="" id="" placeholder="Coupon code"> 
-                    <button class="bg-[#E527B2] rounded-r-lg text-white font-bold 
-                    h-12 p-3">Apply</button>
+                    <input class="border border-[#11111126] rounded-lg p-2 h-12 " type="text" name="" id="coupon-code" placeholder="Coupon code"> 
+                    <button id="btn-apply" class="btn rounded-tr-md rounded-br-md bg-[#E527B2] hover:bg-[#c31494] text-white font-bold 
+                    h-12 py-3 px-5 cursor-pointer" disabled >Apply</button>
                 </div>
                 <div id="purchased-product" class="bg-white w-[350px] rounded-lg p-5 py-6 mt-11 ml-6 h-max">
                     <div id="purchased-product-list">

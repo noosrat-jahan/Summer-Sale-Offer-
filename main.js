@@ -11,13 +11,13 @@ function AddEventInItemById(id){
         totalPrice += productPrice
         document.getElementById('total-price').innerText = totalPrice
 
-
         let finalTotal = totalPrice
-        if(totalPrice >= 200){
-            const discountedPrice = (totalPrice * 20) / 100
-            document.getElementById('discount-price').innerText = discountedPrice
-            finalTotal = totalPrice - discountedPrice
-        }
+        // if(totalPrice >= 200){
+        //     // const discountedPrice = (totalPrice * 20) / 100
+        //     // document.getElementById('discount-price').innerText = discountedPrice
+        //     // finalTotal = totalPrice - discountedPrice
+        //     document.getElementById('btn-apply').removeAttribute('disabled')
+        // }
         document.getElementById('final-total').innerText = finalTotal
 
         const cartContainer = document.createElement('div')
@@ -55,3 +55,34 @@ document.getElementById('purchase=btn').addEventListener('click', function(){
     finalTotalPrice.innerText = '00'
 
 })
+
+
+document.getElementById('coupon-code')
+      .addEventListener('keyup', function(event){
+        const inputValue = event.target.value
+        console.log(inputValue);
+        if(inputValue === 'SELL200'){
+            document.getElementById('btn-apply').removeAttribute('disabled')
+            alert('Coupon Code SELL200 is applied')
+        }
+        
+})
+
+document.getElementById('btn-apply').addEventListener('click', function(){
+    const inputValue =  document.getElementById('coupon-code').value
+    // inputValue.value = ''
+    // console.log('clicked', inputValue);
+
+    if(inputValue === 'SELL200'){
+        document.getElementById('btn-apply').removeAttribute('disabled')
+        // alert('Coupon Code SELL200 is applied')
+    }
+
+    let totalPrice = parseFloat(document.getElementById('total-price').innerText)
+    let finalTotal = totalPrice
+    const discountedPrice = (totalPrice * 20) / 100
+    document.getElementById('discount-price').innerText = discountedPrice
+     finalTotal = totalPrice - discountedPrice
+     document.getElementById('final-total').innerText = finalTotal
+    
+ })
